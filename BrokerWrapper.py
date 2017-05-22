@@ -31,7 +31,7 @@ class Functions:
         url_data = "order/open.php?token=" + API
         response = requests.get(BASE_URL + url_data).json()
         return response
-    def create_order(self, API, symbol, amount, direction, leverage, type, stoploss, takeprofit, ref):
+    def create_order(self, API, symbol, amount, direction, leverage, tradetype, stoploss, takeprofit, ref):
         url_data1 = "order/create.php?token=" + API + "&symbol=" + symbol + "&margin=" + str(amount)
         url_data2 = "&direction=" + direction + "&leverage=" + str(leverage) + "&order_type=" + type
         url_data3 = "&referral_id=" + str(ref)
