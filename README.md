@@ -5,10 +5,11 @@ This wrapper works for all 1Broker API functions.
 BE SURE TO SUPPLY API INFO
 
 ### Example use Py2.7 
+  
 from BrokerWrapper import Functions  
 API = "your-api-info"  
-run = Functions() 
-
+run = Functions()  
+  
 ### Possible arguments  
 API = Your 1Broker API key  
 ID = Position id or Order id  
