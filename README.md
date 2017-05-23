@@ -11,6 +11,7 @@ API = "your-api-info"
 run = Functions()  
   
 ### Possible arguments  
+Arguments may be set to "None" if not being used eg stoploss="None"  
 API = Your 1Broker API key  
 ID = Position id or Order id  
 TRADE_TYPE = market buy or limit trade  
