@@ -33,7 +33,7 @@ class Functions:
         return response
     def create_order(self, API, symbol, amount, direction, leverage, tradetype, stoploss, takeprofit, ref):
         url_data1 = "order/create.php?token=" + API + "&symbol=" + symbol + "&margin=" + str(amount)
-        url_data2 = "&direction=" + direction + "&leverage=" + str(leverage) + "&order_type=" + type
+        url_data2 = "&direction=" + direction + "&leverage=" + str(leverage) + "&order_type=" + tradetype
         url_data3 = "&referral_id=" + str(ref)
         url_data = str(url_data1 + url_data2 + url_data3)
         if stoploss == "" or None:
