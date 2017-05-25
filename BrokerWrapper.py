@@ -7,7 +7,7 @@ BASE_URL = "https://1broker.com/api/v2/"
 
 class Functions:
     def user_details(self, API):
-	url_data = "user/details.php?token=" + API
+        url_data = "user/details.php?token=" + API
 	response = requests.get(BASE_URL + url_data).json()
         return response
     def user_overview(self, API):
@@ -31,19 +31,11 @@ class Functions:
         url_data = "order/open.php?token=" + API
         response = requests.get(BASE_URL + url_data).json()
         return response
-    def create_order(self, API, symbol, amount, direction, leverage, tradetype, ref):
+    def create_order(self, API, symbol, direction, amount, leverage, tradetype, ref):
         url_data1 = "order/create.php?token=" + API + "&symbol=" + symbol + "&margin=" + str(amount)
         url_data2 = "&direction=" + direction + "&leverage=" + str(leverage) + "&order_type=" + tradetype
         url_data3 = "&referral_id=" + str(ref)
         url_data = str(url_data1 + url_data2 + url_data3)
-        if stoploss == "" or None:
-            pass
-        else:
-            url_data3 = url_data3 + "&stop_loss=" + stoploss
-        if takeprofit == "" or None:
-            pass
-    	else:
-            url_data3 = url_data3 + "&take_profit=" + takeprofit
     	response = requests.get(BASE_URL + url_data).json()
 	return response
     def cancel_order(self, API, order_id):
